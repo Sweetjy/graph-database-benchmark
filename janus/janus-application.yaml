@@ -1,0 +1,35 @@
+﻿# 图数据库类型
+graphType: janusgraph
+# 图名称
+graphName: graph-test
+# 默认样本文件
+sample: ../data/knn.txt
+samples:
+  sp: ../data/shortpath.txt
+# 超时时间,单位：s
+timeout: 3600
+# 超时跳过测试项
+timeoutStop: false
+# 遇到错误时跳过测试项
+errorStop: false
+# 数据库所在包名
+dataBaseClass: com.benchmark.janus.database.Janus
+# 自定义参数
+parameters:
+    propertyFile: /home/ljy/janusgraph-benchmark/conf/janusgraph-berkeleyje-lucene.properties
+#  propertyFile: E:\\IntelliJ IDEA\\workspace\\janusgraph-benchmark\\conf\\janusgraph-berkeleyje-lucene.properties
+
+test:
+  - testClass: com.benchmark.janus.function.KNeighbor1
+    count: 100
+    loop: 1
+    timeout: 180
+    - testClass: com.benchmark.janus.function.KNeighbor2
+      count: 100
+      loop: 1
+      timeout: 180
+  - testClass: com.benchmark.janus.function.Shortest
+    count: 100
+    loop: 1
+    sample: sp
+    timeout: 300
