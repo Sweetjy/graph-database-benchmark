@@ -23,13 +23,13 @@ test:
     count: 100
     loop: 1
     timeout: 180
-#  - testClass: com.benchmark.janus.function.KNeighbor2
-#    count: 100
-#    loop: 1
-#    timeout: 180
+  - testClass: com.benchmark.janus.function.KNeighbor2
+    count: 100
+    loop: 1
+    timeout: 180
 
-#  - testClass: com.benchmark.janus.function.Shortest
-#    count: 100
-#    loop: 1
-#    sample: sp
-#    timeout: 300
+  - testClass: com.benchmark.janus.function.Shortest
+    count: 100
+    loop: 1
+    sample: sp
+    timeout: 300
